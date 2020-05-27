@@ -1,0 +1,6 @@
+emcc 1.cpp -o function.html -s EXPORTED_FUNCTIONS="['_int_sqrt']" -s EXTRA_EXPORTED_RUNTIME_METHODS="['ccall', 'cwrap']"
+em++ 1.cpp -o function.html -s EXPORTED_FUNCTIONS="['_int_sqrt']" -s EXTRA_EXPORTED_RUNTIME_METHODS="['ccall', 'cwrap']"
+em++ 1.cpp -o function.html -s EXPORTED_FUNCTIONS="['_found']" -s EXTRA_EXPORTED_RUNTIME_METHODS="['ccall', 'cwrap']" -std=c++17 --preload-file course.txt --preload-file teacher.txt
+em++ 1.cpp -o function.html -std=c++14 --preload-file course.txt --preload-file teacher.txt --bind
+
+emrun 1.html
